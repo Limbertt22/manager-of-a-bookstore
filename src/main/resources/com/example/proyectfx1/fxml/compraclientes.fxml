@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.text.TextFlow?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyectfx1.compraClientes"
+      prefHeight="400.0" prefWidth="600.0" fx:id="system">
+
+            <HBox alignment="CENTER" translateY="70" spacing="10">
+                <VBox alignment="CENTER">
+                    <Label prefWidth="500" prefHeight="30" maxWidth="500" maxHeight="30" fx:id="VR" alignment="CENTER" text="ventas registradas"/>
+                    <TextArea styleClass="infoText" fx:id="registroClientes" prefWidth="500" prefHeight="600" maxWidth="500" maxHeight="700"/>
+                </VBox>
+
+
+                <VBox fx:id="ayudaAdmi" alignment="CENTER" prefWidth="800" prefHeight="600" maxWidth="800" maxHeight="700" spacing="10">
+                    <HBox>
+                        <HBox>
+                        <VBox translateY="-200" translateX="10">
+                            <Label text="buscar cliente o fecha"/>
+                            <HBox>
+                                <TextField fx:id="clienteBuscar" promptText="buscar cliente o fecha" prefHeight="30" prefWidth="200" maxWidth="200" maxHeight="30"/>
+                                <Button fx:id="buscar" text="buscar" prefWidth="120" prefHeight="30" maxHeight="30" maxWidth="120" onAction="#buscar"/>
+                            </HBox>
+                        </VBox>
+
+                            <VBox translateY="-200" translateX="20">
+                                <Label text="eliminar cliente"/>
+                                <HBox>
+                                    <TextField fx:id="elminarCliente" promptText="ingrese numero del cliente" prefHeight="30" prefWidth="200" maxWidth="200" maxHeight="30"/>
+                                    <Button onAction="#eliminar" text="eliminar" prefWidth="120" prefHeight="30" maxHeight="30" maxWidth="120"/>
+                                </HBox>
+                            </VBox>
+                        </HBox>
+                    </HBox>
+                </VBox>
+
+            </HBox>
+</VBox>

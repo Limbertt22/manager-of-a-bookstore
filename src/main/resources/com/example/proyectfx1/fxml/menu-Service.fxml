@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.Button?>
+<VBox fx:id="body" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyectfx1.SceneRootController22"
+      prefHeight="400.0" prefWidth="600.0" alignment="TOP_CENTER" spacing="10" stylesheets="../styleCss/Style3-Service.css">
+
+    <HBox fx:id="title" prefWidth="-Infinity" prefHeight="70" alignment="TOP_CENTER">
+        <Label text="Servicios" alignment="CENTER" textFill="ghostwhite"/>
+    </HBox>
+
+    <VBox styleClass="servWeb" alignment="TOP_CENTER" fx:id="servWeb" prefWidth="400" prefHeight="200" maxHeight="200" maxWidth="400">
+        <Label text="Servicios Web" alignment="TOP_CENTER"/>
+        <Label text="En technova hacemos paginas web responsivas, adaptables y faciles de &#10;mantener. &#10;&#10;contamos con conocimientos en:&#10;-React&#10;-Javascript&#10;-PHP&#10;-Angular&#10;-HTML y CSS"/>
+    </VBox>
+
+    <VBox styleClass="servWeb" alignment="TOP_CENTER" fx:id="servWeb1" prefWidth="400" prefHeight="200" maxHeight="200" maxWidth="400">
+        <Label text="Aplicaciones de ecritorio" alignment="TOP_CENTER"/>
+        <Label text="En technova nos complace informarle que tambien somos pioneros en la &#10;industria de las aplicaciones de escritorio.&#10;Tenemos conocimientos en herramientas como:&#10;-java&#10;-c++&#10;-phyton&#10;-SQL&#10;-MYSQL&#10;-springboot&#10;-c#"/>
+    </VBox>
+
+    <VBox styleClass="servWeb" alignment="TOP_CENTER" fx:id="servWeb2" prefWidth="400" prefHeight="200" maxHeight="200" maxWidth="400">
+        <Label text="Aplicaciones moviles" alignment="TOP_CENTER"/>
+        <Label text="Las aplicaciones moviles son lo que mueven al mund0 en estos tiempos &#10;es por eso que en technova ofrecemos servicios de desarrollo de apps.&#10;&#10;contamos con conocimiento en:&#10;-java&#10;-c#&#10;-android studios&#10;-swift&#10;-SQL&#10;-SQL LITE"/>
+    </VBox>
+
+
+</VBox>

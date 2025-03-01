@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="body" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+        fx:controller="com.example.proyectfx1.CalculosAndOperaciones"
+        prefHeight="400.0" prefWidth="600.0" alignment="CENTER_LEFT">
+
+    <HBox>
+    <VBox fx:id="bodyCalculator" prefWidth="500" prefHeight="600" maxWidth="500" maxHeight="600" alignment="CENTER_LEFT">
+        <TextField fx:id="ventana" translateX="90" prefWidth="300" prefHeight="50" maxWidth="300" maxHeight="50" translateY="-50" promptText="escribir operacion" alignment="TOP_CENTER"/>
+
+        <HBox alignment="CENTER">
+            <Button onAction="#agregate" styleClass="bottones" text="0" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero0"/>
+            <Button onAction="#agregate" styleClass="bottones" text="1" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero1"/>
+            <Button onAction="#agregate" styleClass="bottones" text="2" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero2"/>
+            <Button onAction="#agregate" styleClass="bottones" text="3" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero3"/>
+        </HBox>
+        <HBox alignment="CENTER">
+            <Button onAction="#agregate" styleClass="bottones" text="4" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero4"/>
+            <Button onAction="#agregate" styleClass="bottones" text="5" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero5"/>
+            <Button onAction="#agregate" styleClass="bottones" text="6" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero6"/>
+            <Button onAction="#agregate" styleClass="bottones" text="7" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero7"/>
+        </HBox>
+        <HBox alignment="CENTER">
+            <Button onAction="#agregate" styleClass="bottones" text="8" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero8"/>
+            <Button onAction="#agregate" styleClass="bottones" text="9" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero9"/>
+            <Button onAction="#agregate" styleClass="bottones" text="+" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero10"/>
+            <Button onAction="#agregate" styleClass="bottones" text="-" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero11"/>
+        </HBox>
+        <HBox alignment="CENTER">
+            <Button onAction="#agregate" styleClass="bottones" text="(" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero12"/>
+            <Button onAction="#agregate" styleClass="bottones" text=")" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero13"/>
+            <Button onAction="#agregate" styleClass="bottones" text="/" prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero14"/>
+            <Button onAction="#agregate" styleClass="bottones" text="." prefHeight="50" prefWidth="100" maxHeight="50" maxWidth="100" fx:id="numero15"/>
+        </HBox>
+        <HBox translateX="-50" alignment="CENTER">
+            <Button onAction="#agregate" styleClass="bottones" text="x" prefHeight="50" prefWidth="100" maxWidth="100" maxHeight="50" fx:id="numero16"/>
+            <Button onAction="#agregate" styleClass="bottones" text="c" prefHeight="50" prefWidth="100" maxWidth="100" maxHeight="50" fx:id="numero17"/>
+            <Button onAction="#agregate" styleClass="bottones" text="=" prefHeight="50" prefWidth="100" maxWidth="100" maxHeight="50" fx:id="numero18"/>
+        </HBox>
+    </VBox>
+
+    </HBox>
+</VBox>

@@ -1,0 +1,18 @@
+#body{
+    -fx-background-color: linear-gradient(to right, purple, black);
+}
+
+#title{
+    -fx-background-color: black;
+    -fx-font-size:40;
+}
+
+.servWeb{
+    -fx-background-color: linear-gradient(to right, white, dimgray);
+    -fx-border-color:white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 15px;
+    -fx-border-insets: 0px;
+    -fx-background-radius: 15px;
+}
+

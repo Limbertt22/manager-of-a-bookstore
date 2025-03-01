@@ -1,0 +1,22 @@
+#system{
+    -fx-background-color: linear-gradient(to right, white, dimgray);
+}
+
+.infoText {
+    -fx-background-color:black;
+    -fx-font-size:20;
+}
+
+#VR{
+    -fx-background-color:black;
+    -fx-font-size:25;
+    -fx-text-fill:white;
+}
+
+#ayudaAdmi{
+    -fx-background-color: linear-gradient(to right, white, dimgray);
+    -fx-background-radius:20;
+    -fx-border-color:black;
+    -fx-border-width:1;
+    -fx-border-radius:20;
+}

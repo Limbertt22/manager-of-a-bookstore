@@ -1,0 +1,26 @@
+#body{
+    -fx-background-color: linear-gradient(to right, black, dimgray);
+}
+
+#bodyCalculator{
+    -fx-background-color: black;      /* Color de fondo */
+       -fx-background-radius: 20;       /* Radio de las esquinas del fondo */
+       -fx-border-color: white;         /* Color del borde */
+       -fx-border-width: 2px;           /* Grosor del borde */
+       -fx-border-radius: 20;           /* Radio de las esquinas del borde */
+       -fx-border-insets: 1;            /* Espacio entre el borde y el contenido */
+       -fx-background-insets: 1;        /* Espacio entre el fondo y el borde */
+}
+
+#ventana{
+    -fx-font-size:22;
+}
+
+#ventana:hover{
+    -fx-background-color: gold;
+    -fx-font-size:26;
+}
+
+.bottones:hover{
+   -fx-background-color: gold;
+}

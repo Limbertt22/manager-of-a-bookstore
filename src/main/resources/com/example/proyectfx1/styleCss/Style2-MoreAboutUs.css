@@ -1,0 +1,22 @@
+#body{
+    -fx-background-color: linear-gradient(to right, purple, black);
+}
+
+#section{
+    -fx-background-color: linear-gradient(to right, white, dimgray);
+}
+
+#info{
+   -fx-background-color:white;
+   -fx-text-fill: white;
+}
+
+#info .content{
+    -fx-background-color: black;
+}
+
+#title{
+    -fx-position:absolute;
+    -fx-font-size: 27;
+    -fx-text-fill: white;
+}

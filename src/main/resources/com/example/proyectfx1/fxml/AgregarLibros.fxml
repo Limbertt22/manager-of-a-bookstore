@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.geometry.Pos?>  <!-- Se importa Pos para alinear elementos -->
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<VBox fx:id="PowerPC" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyectfx1.AgregarLibrosController"
+      prefHeight="400.0" prefWidth="600.0" alignment="CENTER">
+
+    <HBox alignment="CENTER_LEFT">
+        <TextArea editable="false" fx:id="TextArea" prefWidth="800" prefHeight="600" maxHeight="600" maxWidth="800"/>
+        <VBox alignment="TOP_LEFT"  fx:id="controles" prefHeight="600" maxHeight="600" prefWidth="800" maxWidth="800">
+
+            <VBox alignment="CENTER">
+                <Label styleClass="Labels" text="Nombre del libro"/>
+                <TextField fx:id="name" alignment="TOP_LEFT" maxWidth="200" maxHeight="30" prefWidth="200" prefHeight="30" promptText="nombre del libro"/>
+
+                <Label styleClass="Labels" fx:id="LabelCosto" text="Costo"/>
+                <TextField fx:id="costo" alignment="TOP_LEFT" maxWidth="200" maxHeight="30" prefWidth="200" prefHeight="30" promptText="costo"/>
+            </VBox>
+
+            <VBox translateY="10" alignment="CENTER">
+                <Button onAction="#aggregate" fx:id="buttonAc" text="agregar" maxHeight="50" maxWidth="100" prefHeight="50" prefWidth="100"/>
+            </VBox>
+
+            <VBox fx:id="titleSec" translateY="50" alignment="CENTER">
+            <Label fx:id="textT" text="Borrar libro" styleClass="Labels" alignment="CENTER"/>
+            </VBox>
+
+            <VBox alignment="CENTER" translateY="70">
+                <Label styleClass="Labels" text="Nombre del libro"/>
+                    <TextField fx:id="nameB" alignment="TOP_LEFT" maxWidth="200" maxHeight="30" prefWidth="200" prefHeight="30" promptText="nombre del libro"/>
+            </VBox>
+
+            <VBox translateY="90" alignment="CENTER">
+                <Button fx:id="buttonBorrar" text="borrar" maxHeight="50" maxWidth="100" prefHeight="50" prefWidth="100" onAction="#borrarLibro"/>
+            </VBox>
+        </VBox>
+    </HBox>
+</VBox>

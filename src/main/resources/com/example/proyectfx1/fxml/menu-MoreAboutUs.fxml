@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="body" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyectfx1.SceneRootController22"
+      prefHeight="400.0" prefWidth="600.0" stylesheets="../styleCss/Style2-MoreAboutUs.css">
+
+    <VBox alignment="TOP_CENTER">
+
+        <Label text="TechNova" alignment="TOP_CENTER" fx:id="title"/>
+
+        <TextArea fx:id="info" editable="false" text="
+En TechNova Solutions, creemos que la tecnología es más que solo líneas de código: es la &#10;
+clave para transformar industrias, mejorar la vida de las personas y redefinir el futuro.&#10;
+Desde nuestra fundación, nos hemos dedicado a diseñar, desarrollar e implementar&#10;
+soluciones digitales de vanguardia, combinando creatividad, estrategia y excelencia&#10;
+técnica.
+&#10;
+Nuestra Misión&#10;
+Nos apasiona convertir ideas en realidades digitales. Nos especializamos en el desarrollo&#10;
+ de software a medida, inteligencia artificial, soluciones en la nube, desarrollo web y móvil,&#10;
+automatización y ciberseguridad. Trabajamos con tecnologías emergentes para ofrecer&#10;
+productos y servicios innovadores que optimizan procesos, aumentan la eficiencia y&#10;
+brindan experiencias únicas a nuestros clientes.&#10;
+&#10;
+Nuestra Filosofía&#10;
+En un mundo donde la tecnología evoluciona a una velocidad sin precedentes, nuestra&#10;
+filosofía se basa en tres pilares fundamentales:&#10;
+&#10;
+Innovación constante: Nos mantenemos a la vanguardia de la industria, explorando nuevas&#10;
+tecnologías y metodologías para ofrecer soluciones de alto impacto.&#10;
+Calidad y eficiencia: Cada línea de código que escribimos es sinónimo de precisión,&#10;
+seguridad y rendimiento, garantizando productos confiables y escalables.&#10;
+Colaboración y confianza: Construimos relaciones sólidas con nuestros clientes y socios,&#10;
+trabajando en equipo para desarrollar soluciones personalizadas que se adapten a sus&#10;
+necesidades.&#10;
+&#10;
+Nuestro Enfoque&#10;
+Cada proyecto es un desafío único. Escuchamos, analizamos y diseñamos estrategias&#10;
+personalizadas para cada cliente, asegurando que nuestras&#10;
+soluciones no solo cumplan con sus expectativas, sino que las superen. Ya sea a través&#10;
+del desarrollo de plataformas inteligentes, aplicaciones móviles intuitivas o herramientas&#10;
+basadas en datos, nuestra meta es impulsar el crecimiento y la transformación digital de&#10;
+las empresas.&#10;
+&#10;
+Un Futuro Sin Límites&#10;
+En TechNova Solutions, no solo seguimos el ritmo del cambio, lo lideramos. Creemos que&#10;
+la tecnología debe ser accesible, poderosa y transformadora. Trabajamos&#10;
+incansablemente para desarrollar software que no solo resuelva problemas actuales, sino&#10;
+que también siente las bases para un futuro más inteligente, eficiente y sostenible.&#10;
+&#10;
+Si buscas un equipo comprometido, apasionado y con la experiencia necesaria para llevar&#10;
+tu proyecto al siguiente nivel, estás en el lugar correcto.&#10;
+&#10;
+Bienvenido a TechNova Solutions, donde la tecnología y la innovación se encuentran para&#10;
+crear un mañana mejor. 🚀&#10;
+
+" prefHeight="600" prefWidth="530" maxWidth="530" maxHeight="600"/>
+    </VBox>
+</VBox>

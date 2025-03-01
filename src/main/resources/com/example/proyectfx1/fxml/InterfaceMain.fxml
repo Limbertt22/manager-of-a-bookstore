@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<VBox fx:id="body" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.proyectfx1.SceneRootController"
+      prefHeight="400.0" prefWidth="600.0" alignment="CENTER" spacing="10">
+
+    <!-- Barra de menú en la parte superior -->
+    <HBox VBox.vgrow="NEVER" fx:id="menubar" spacing="30"  alignment="CENTER_LEFT" prefHeight="30" prefWidth="200">
+        <Label fx:id="option1" text="contactanos" onMouseClicked="#Ispressed"/>
+        <Label fx:id="option2" text="herramientas" onMouseClicked="#Ispressed"/>
+        <Label fx:id="option3" text="version" onMouseClicked="#Ispressed"/>
+
+        <Region fx:id="spacer" HBox.hgrow="ALWAYS"/>
+
+        <ImageView fx:id="imagenContenedor">
+            <Image requestedWidth="30" requestedHeight="30" url="@../imagines/pngegg (9).png"/>
+        </ImageView>
+
+        <TextField fx:id="field" promptText="busqueda" prefWidth="180" prefHeight="20"/>
+    </HBox>
+
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="0" VBox.vgrow="NEVER" fx:id="menu1"  prefHeight="300" prefWidth="250" visible="false">
+        <Label fx:id="servicios" text="servicios" styleClass="servicios" onMouseClicked="#Options"/>
+        <Label fx:id="MADN" text="mas acerca de nosotros" styleClass="servicios" onMouseClicked="#Options"/>
+    </VBox>
+
+    <VBox GridPane.rowIndex="1" GridPane.columnIndex="1" VBox.vgrow="NEVER" fx:id="menu2"  alignment="BOTTOM_RIGHT" prefHeight="300" prefWidth="250" visible="false">
+        <Label text="configuracion" styleClass="servicios"/>
+        <Label text="configuracion avanza." styleClass="servicios"/>
+    </VBox>
+
+    <VBox GridPane.rowIndex="2" GridPane.columnIndex="2" VBox.vgrow="NEVER" fx:id="menu3" alignment="BOTTOM_RIGHT" prefHeight="300" prefWidth="250" visible="false">
+        <Label text="version" styleClass="servicios"/>
+        <Label text="historial" styleClass="servicios"/>
+    </VBox>
+
+
+    <HBox translateY="-200" spacing="530">
+        <VBox fx:id="Modulos" spacing="2">
+            <Button fx:id="modulo1" styleClass="modulos" text="Compra clientes" prefWidth="300" prefHeight="200" onAction="#PressedButtons"/>
+            <Button fx:id="modulo2" styleClass="modulos" text="Agregar libros" prefWidth="300" prefHeight="200" onAction="#PressedButton2"/>
+            <Button fx:id="modulo3" styleClass="modulos" text="Calculos $" prefWidth="300" prefHeight="200" onAction="#PressedButtons"/>
+        </VBox>
+
+        <VBox alignment="CENTER_RIGHT">
+            <Label text="AVISOS"/>
+            <TextArea prefHeight="300" prefWidth="400" promptText="No hay ningún aviso 😪😪.."/>
+        </VBox>
+    </HBox>
+
+    <HBox GridPane.rowIndex="7" fx:id="HoraMx" alignment="TOP_RIGHT">
+        <Label text="00:00:00" fx:id="setHora" textAlignment="CENTER" alignment="TOP_RIGHT"/>
+    </HBox>
+</VBox>

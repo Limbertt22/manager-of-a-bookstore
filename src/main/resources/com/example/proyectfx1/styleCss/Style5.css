@@ -1,0 +1,44 @@
+#PowerPC{
+    -fx-background-color: linear-gradient(to right, white, dimgray);
+}
+
+#controles{
+    -fx-background-color: black;
+    -fx-border-radius:1;
+    -fx-background-border:1;
+     -fx-border-insets:0;
+    -fx-border-color:white;
+    -fx-border-width:3;
+}
+
+.Labels{
+    -fx-text-fill:white;
+    -fx-font-size:20;
+}
+
+#buttonAc{
+    -fx-background-color: linear-gradient(to bottom, green, darkgreen);
+    -fx-text-fill:white;
+}
+
+#TextArea{
+    -fx-font-size:17;
+    -fx-text-fill:white;
+}
+
+#TextArea .content{
+    -fx-background-color:black;
+}
+
+#titleSec{
+    -fx-background-color:white;
+}
+
+#textT{
+    -fx-text-fill:black;
+}
+
+#buttonBorrar{
+    -fx-background-color: linear-gradient(to bottom, red, darkred);
+    -fx-text-fill:white;
+}
