@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="body" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.proyectfx1.ControllerHistorial"
+            prefHeight="400.0" prefWidth="600.0" alignment="CENTER">
+
+    <HBox alignment="CENTER">
+    <VBox styleClass="content" alignment="CENTER">
+        <Label styleClass="title" text="historial" prefWidth="400" maxWidth="400"/>
+        <TextArea fx:id="historical" promptText="aun nada" prefHeight="500" prefWidth="400" maxHeight="500" maxWidth="400" onMousePressed="#buscar"/>
+    </VBox>
+
+        <VBox translateX="20" styleClass="content">
+            <Label styleClass="title" text="Buscar actividad"/>
+            <HBox>
+                <TextField fx:id="Buscar" promptText="buscar actividad o fecha" prefHeight="30" prefWidth="200" maxWidth="200" maxHeight="30"/>
+                <Button fx:id="buscar" text="buscar" prefWidth="120" prefHeight="30" maxHeight="30" maxWidth="120" onMousePressed="#buscar"/>
+            </HBox>
+        </VBox>
+    </HBox>
+
+</VBox>

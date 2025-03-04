@@ -1,0 +1,9 @@
+#version{
+    -fx-font-size:50;
+    -fx-text-fill:white;
+    -fx-background-color:black;
+}
+
+#body{
+    -fx-background-color: linear-gradient(to right, white, dimgray);
+}

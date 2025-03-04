@@ -13,7 +13,6 @@
     <!-- Barra de menú en la parte superior -->
     <HBox VBox.vgrow="NEVER" fx:id="menubar" spacing="30"  alignment="CENTER_LEFT" prefHeight="30" prefWidth="200">
         <Label fx:id="option1" text="contactanos" onMouseClicked="#Ispressed"/>
-        <Label fx:id="option2" text="herramientas" onMouseClicked="#Ispressed"/>
         <Label fx:id="option3" text="version" onMouseClicked="#Ispressed"/>
 
         <Region fx:id="spacer" HBox.hgrow="ALWAYS"/>
@@ -36,8 +35,8 @@
     </VBox>
 
     <VBox GridPane.rowIndex="2" GridPane.columnIndex="2" VBox.vgrow="NEVER" fx:id="menu3" alignment="BOTTOM_RIGHT" prefHeight="300" prefWidth="250" visible="false">
-        <Label text="version" styleClass="servicios"/>
-        <Label text="historial" styleClass="servicios"/>
+        <Label fx:id="version" text="version" styleClass="servicios" onMouseClicked="#Options"/>
+        <Label fx:id="historial" text="historial" styleClass="servicios" onMousePressed="#PressedButton3"/>
     </VBox>
 
 

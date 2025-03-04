@@ -14,7 +14,7 @@ import java.util.Random;
 public class compraClientes {
 
     @FXML
-    private TextArea registroClientes;
+    public TextArea registroClientes;
 
     @FXML
     private TextField clienteBuscar;
@@ -22,12 +22,21 @@ public class compraClientes {
     @FXML
     private TextField elminarCliente;
     private static final HashMap<String, Integer> map = new HashMap<>();
+
     static {
         map.put("principito", 200);
     }
+
+    private ControllerHistorial controllerHistorial;
+    //metodo muy importante
+    public void setControllerHistorial(ControllerHistorial controllerHistorial) {
+        this.controllerHistorial = controllerHistorial;
+    }
+
     int fila = 0;
     @FXML
     public void buscar() {
+
         String textArea = registroClientes.getText();
         String buscar = clienteBuscar.getText();
         int index = textArea.indexOf(buscar);
@@ -107,6 +116,8 @@ public class compraClientes {
 
        String name = nombres[nombre]+" "+nombres[apellido]+" "+nombres[segundoApellido];
        registroClientes.appendText("Nombre: "+name+"\n");
+       controllerHistorial.sethisto("se agrego nuevo cliente:"+name+"\n");
+       controllerHistorial.sethisto("»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»»\n");
        JOptionPane.showConfirmDialog(null,name+" a comprado un nuevo libro!");
        edad();
     }

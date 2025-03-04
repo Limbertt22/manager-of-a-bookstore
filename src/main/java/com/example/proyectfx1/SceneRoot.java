@@ -15,7 +15,6 @@ public class SceneRoot extends Application {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fxml/InterfaceMain.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-
             //aqui se agrega la hoja de estilo, se pone un titulo, se carga la escena a la estacion y se muestra el show!
             scene.getStylesheets().add(getClass().getResource("styleCss/Style-InterfaceMain.css").toExternalForm());
             stage.setTitle("BOOK'S and Controller");

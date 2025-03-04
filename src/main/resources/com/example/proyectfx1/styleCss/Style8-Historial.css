@@ -1,0 +1,24 @@
+#body{
+    -fx-background-color: linear-gradient(to right, white, black);
+}
+
+.content{
+    -fx-background-color:black;
+}
+
+.title{
+    -fx-font-size:20;
+    -fx-text-fill:black;
+    -fx-background-color:white;
+    -fx-border-radius:10;
+    -fx-border-color:black;
+    -fx-background-radius:10;
+}
+
+#historical .content{
+    -fx-background-color:linear-gradient(to bottom, orange, yellow);
+    -fx-border-color:black;
+    -fx-border-width:5;
+    -fx-text-fill:black;
+    -fx-font-size:15;
+}

@@ -13,8 +13,6 @@ import javafx.util.Duration;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
-
-
 public class SceneRootController{
     @FXML
     private Button modulo1;
@@ -41,9 +39,6 @@ public class SceneRootController{
     private Label option1;
 
     @FXML
-    private Label option2;
-
-    @FXML
     private Label option3;
 
     @FXML
@@ -53,18 +48,22 @@ public class SceneRootController{
     private Label servicios;
 
     @FXML
+    private Label version;
+    @FXML
     Button modulo2;
-
     protected int cont3 = 0, cont = 0, cont2 = 0;
     Stage escenario;
+    Stage escenario4;
     Stage escenario2;
     Stage escenario3;
-    protected DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+    Stage escenario5;;
 
+    //controler de la otra clse
+    private ControllerHistorial controllerHistorial;
+    protected DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
     @FXML
     public void Ispressed() {
         option1.setOnMouseClicked(event -> {
-            menu2.setVisible(false);
             menu3.setVisible(false);
             if (cont == 0) {
                 menu1.setVisible(true);
@@ -75,21 +74,7 @@ public class SceneRootController{
             }
         });
 
-        option2.setOnMouseClicked(event -> {
-            menu1.setVisible(false);
-            menu3.setVisible(false);
-            if (cont2 == 0) {
-                menu2.setVisible(true);
-                cont2 = 1;
-
-            } else {
-                menu2.setVisible(false);
-                cont2 = 0;
-            }
-        });
-
         option3.setOnMouseClicked(event -> {
-            menu2.setVisible(false);
             menu1.setVisible(false);
 
             if (cont3 == 0) {
@@ -104,11 +89,24 @@ public class SceneRootController{
     }
 
     public void initialize() {
+        try{
+            FXMLLoader folder = new FXMLLoader(getClass().getResource("fxml/historial.fxml"));
+            Parent root = folder.load();
+            root.getStylesheets().add(getClass().getResource("styleCss/Style8-Historial.css").toExternalForm());
+            controllerHistorial = folder.getController();
+            escenario4 = new Stage();
+            escenario4.setTitle("historial");
+            escenario4.setScene(new Scene(root, 700, 700));
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         try{
             FXMLLoader folder = new FXMLLoader(getClass().getResource("fxml/compraclientes.fxml"));
             Parent root = folder.load();
             root.getStylesheets().add(getClass().getResource("styleCss/Style4-CompraClientes.css").toExternalForm());
+            compraClientes compraClientes = folder.getController();
+            compraClientes.setControllerHistorial(controllerHistorial);
             escenario = new Stage();
             escenario.setTitle("compras clientes");
             escenario.setScene(new Scene(root, 700, 700));
@@ -120,6 +118,14 @@ public class SceneRootController{
             FXMLLoader folder = new FXMLLoader(getClass().getResource("fxml/AgregarLibros.fxml"));
             Parent root = folder.load();
             root.getStylesheets().add(getClass().getResource("styleCss/Style5.css").toExternalForm());
+            ///gabriel de el futuro, se que se te va a olvidar asi que aqui te dejo la explicacion de como usar funciones
+            /// en otras clases,
+
+            /// aqui primero llamas el controler de tu ventana o fxml y extraes su controller
+            AgregarLibrosController agregarLibrosController = folder.getController();
+
+            ///aqui le pones el controler de la otra clase
+            agregarLibrosController.setControllerHistorial(controllerHistorial);
 
             escenario2 = new Stage();
             escenario2.setTitle("agregar libros");
@@ -154,9 +160,10 @@ public class SceneRootController{
         PressedButtons();
     }
 
+
     public void PressedButtons(){
        modulo1.setOnAction(event ->{
-           escenario.show();
+               escenario.show();
        });
 
        modulo3.setOnAction(event ->{
@@ -166,6 +173,10 @@ public class SceneRootController{
 
     public void PressedButton2(){
         escenario2.show();
+    }
+
+    public void PressedButton3(){
+        escenario4.show();
     }
 
     public void Options() {
@@ -201,6 +212,21 @@ public class SceneRootController{
             }
         });
 
+        version.setOnMouseClicked(event -> {
+            try {
+                FXMLLoader loader1 = new FXMLLoader(getClass().getResource("fxml/Version.fxml"));
+                Parent root1 = loader1.load();
+                root1.getStylesheets().add(getClass().getResource("styleCss/Style7-version.css").toExternalForm());
+
+                Stage stage1 = new Stage();
+                stage1.setTitle("version");
+                stage1.setScene(new Scene(root1, 700, 700));
+                System.out.println("FXML cargado correctamente");
+                stage1.show();
+            } catch (Exception e) {
+                System.out.println("");
+            }
+        });
 
     }
 }

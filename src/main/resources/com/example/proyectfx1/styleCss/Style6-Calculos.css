@@ -3,7 +3,7 @@
 }
 
 #bodyCalculator{
-    -fx-background-color: black;      /* Color de fondo */
+       -fx-background-color: black;      /* Color de fondo */
        -fx-background-radius: 20;       /* Radio de las esquinas del fondo */
        -fx-border-color: white;         /* Color del borde */
        -fx-border-width: 2px;           /* Grosor del borde */
@@ -23,4 +23,21 @@
 
 .bottones:hover{
    -fx-background-color: gold;
+}
+
+#panelFinanzas{
+    -fx-background-color: linear-gradient(to bottom, white, dimgray);
+    -fx-border-radius:30;
+    -fx-border-color:white;
+    -fx-background-radius:30;
+}
+
+#Labelt{
+    -fx-font-size:30;
+}
+
+#monedas{
+    -fx-border-color:black;
+    -fx-border-width:1;
+    -fx-background-color:white;
 }

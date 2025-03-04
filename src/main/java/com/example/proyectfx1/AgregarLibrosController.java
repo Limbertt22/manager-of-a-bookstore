@@ -17,14 +17,28 @@ public class AgregarLibrosController {
 
     protected LocalDate fecha = LocalDate.now();
 
+    //se llama la clase para ser utilizada la funcion
+    private ControllerHistorial controllerHistorial;
+
+    //metodo muy importante
+    public void setControllerHistorial(ControllerHistorial controllerHistorial) {
+        this.controllerHistorial = controllerHistorial;
+    }
+
+
     public void aggregate(){
+        DateTimeFormatter date = DateTimeFormatter.ofPattern("dd/MM/yy");
+        String fechahoy = fecha.format(date);
         if(!name.getText().isEmpty() && !costo.getText().isEmpty()){
-            DateTimeFormatter date = DateTimeFormatter.ofPattern("dd/MM/yy");
-            String fechahoy = fecha.format(date);
             TextArea.appendText("Libro: "+name.getText()+"                                              "+fechahoy+"\n");
             TextArea.appendText("costo: "+costo.getText()+"\n");
             TextArea.appendText("___________________________________________________________________\n");
         }
+
+        //mensaje o texto que se quiere dar
+        controllerHistorial.sethisto("se agrego un libro llamado:"+name.getText()+" el "+fechahoy+"\n");
+        controllerHistorial.sethisto("___________________________________________________________________\n");
+
         compraClientes.agregarLibro(name.getText(), Integer.parseInt(costo.getText()));
     }
 
