@@ -1,0 +1,1 @@
+First project with javafx and css together, simulator of a library administration, it has a purchase history, book aggregator, calculator and conversion of foreign to local money and finally a purchase manager, as well as a message board.
